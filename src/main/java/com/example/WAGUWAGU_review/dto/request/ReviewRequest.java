@@ -6,7 +6,7 @@ import lombok.Setter;
 import java.time.LocalDateTime;
 
 public record ReviewRequest(
-    Long reviewerId, String userName, String content,Long storeId, int rating
+    Long reviewerId, String userName, String content,Long storeId, int rating, String storeName
 ) {
         public Review toEntity() {
         return Review.builder()
@@ -16,6 +16,7 @@ public record ReviewRequest(
                 .timestamp(LocalDateTime.now())
                 .storeId(storeId)
                 .rating(rating)
+                .storeName(storeName)
                 .build();
     }
 }

@@ -5,9 +5,9 @@ import com.example.WAGUWAGU_review.entity.Review;
 import java.time.LocalDateTime;
 
 public record ReviewResponse(
-        String userName, String content, LocalDateTime timestamp, int rating
+        String userName, String content, LocalDateTime timestamp, int rating,String storeName
 ) {
     public static ReviewResponse fromReview(Review review) {
-    return new ReviewResponse(review.getUserName(), review.getContent(), review.getTimestamp(),review.getRating());
+    return new ReviewResponse(review.getUserName(), review.getContent(), review.getTimestamp(),review.getRating(),review.getStoreName());
     }
 }

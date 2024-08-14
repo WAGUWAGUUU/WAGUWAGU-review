@@ -36,4 +36,7 @@ public class Review {
 
     @Column(name = "REVIEWER_NAME")
     private String userName;
+
+    @Column(name ="RES_NAME")
+    private String storeName;
 }
